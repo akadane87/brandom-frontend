@@ -4,19 +4,137 @@
       <title>Example</title>
 
       <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="assets/styles/styles1.css" type=text/css>
 
       <script src="dependencies.js" type="text/javascript" charset="utf-8" defer></script>
       <script src="bundle.js" type="text/javascript" charset="utf-8" defer></script>
     </head>
     <body class="container-fluid">
-      <h1>Example</h1>
+      <h1>Brandom</h1>
+      <br>
+      <br>
 
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-      eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-      minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
-      ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-      velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-      cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
-      est laborum.</p>
+      <!--DROPDOWN STARTS HERE -->
+              <div class="dropdown_wrapper">
+              <div class="dropdown">
+              <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                Click to Start
+                <span class="caret"></span>
+              </button>
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                <button class="btn btn-primary" id="sign-up-btn" data-toggle="modal" data-target="#modal-1">sign UP</button>
+                <button class="btn btn-primary" id="sign-in-btn" data-toggle="modal" data-target="#modal-2">sign IN</button>
+                <br>
+                <form id="sign-out"><button class="btn btn-primary" id="sign-out-btn" type="submit" >sign OUT></button></form>
+                <li role="separator" class="divider"></li>
+                <button id="change-password" class="btn btn-primary" data-toggle="modal" data-target="#modal-3">Change Password</button>
+              </ul>
+            </div>
+          </div>
+      <!--DROPDOWN ENDS HERE -->
+
+<br>
+<br>
+<br>
+<button id ="create_case" class="reset" name="subject" type="submit" value="HTML">GENERATE CASE STUDY</button>
+
+<div class="case_study2"></div>
+
+<div class="case_study">
+  <h3>Case 1</h3>
+
+  <div class="brand data_box"></div>
+  <div class="mockup data_box"></div>
+  <div class="medium data_box"></div>
+  <br>
+
+    <form id="new-project-form" class="form-group">
+      <input type="url" class="form-control" id="case1_url" placeholder="Enter URL" name="project[url]">
+      <button id="case1_submit" type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>
+
+
+      <!--MODAL #1 STARTS HERE *** SIGN UP -->
+<div id="modal-1" class="modal fade" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title">Sign Up</h4>
+      </div>
+      <div class="modal-body">
+        <!--Modal Forms -->
+        <form id="sign-up" class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" class="form-control" id="SignUp_email" placeholder="Enter email" name="credentials[email]">
+          <br>
+            <label for="email">Password:</label>
+            <input type="password" class="form-control" id="SignUp_password" placeholder="Enter Password" name="credentials[password]">
+          <br>
+            <label for="email">Confirm Password:</label>
+            <input type="password" class="form-control" id="SignUp_password_confirm" placeholder="Enter Password" name="credentials[password_confirmation]">
+          <div class="modal-footer">
+            <button type="submit" class="btn btn-primary">Play</button>
+          </div>
+        </form>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+<!--MODAL #1 ENDS HERE -->
+
+<!--MODAL #2 STARTS HERE **SIGN IN -->
+<div id="modal-2" class="modal fade" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title">Sign In</h4>
+      </div>
+      <div class="modal-body">
+        <!--Modal Forms -->
+        <form id="sign-in" class="form-group">
+          <label for="email">Email:</label>
+          <input type="email" class="form-control" id="SignIn_email" placeholder="Enter email" name="credentials[email]">
+          <br>
+            <label for="email">Password:</label>
+            <input type="password" class="form-control" id="SignIn_password" placeholder="Enter Password" name="credentials[password]">
+          <br>
+          <div class="modal-footer">
+            <button type="submit" id="sign-in-button" class="btn btn-primary">Play</button>
+          </form>
+        </div>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+<!--MODAL #2 ENDS HERE -->
+
+<!--MODAL #3 STARTS HERE ** New Password -->
+<div id="modal-3" class="modal fade" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title">New Password</h4>
+      </div>
+      <div class="modal-body">
+        <!--Modal Forms -->
+      <form id="change-password" class="form-group">
+      <label for="email">Old Password:</label>
+      <input type="password" class="form-control" id="newPasswordOne" placeholder="Old Password" name="passwords[old]">
+    <br>
+      <label for="email">Confirm Password:</label>
+      <input type="password" class="form-control" id="newPasswordTwo" placeholder="New Password" name="passwords[new]">
+    <br>
+        <button type="submit" class="btn btn-primary" id="onChangePassword">Play</button>
+      </form>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+<!--MODAL #3 ENDS HERE -->
+
     </body>
 </html>

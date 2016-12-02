@@ -1,7 +1,7 @@
 'use strict';
 
-const auth_api = require('./auth_api');
-const auth_ui = require('./auth_ui');
+const auth_api = require('./auth_api.js');
+const auth_ui = require('./auth_ui.js');
 const getFormFields = require('../../../lib/get-form-fields.js');
 
 const onSignUp = function(event){
@@ -9,7 +9,7 @@ const onSignUp = function(event){
   let data = getFormFields(event.target);
   auth_api.signUp(data)
   .then(auth_ui.success)
-  .catch(auth_ui.failure);
+  .fail(auth_ui.error);
 };
 
 const onSignIn = function(event){
@@ -17,14 +17,14 @@ const onSignIn = function(event){
   let data = getFormFields(event.target);
   auth_api.signIn(data)
   .then(auth_ui.signInSuccess)
-  .catch(auth_ui.failure);
+  .fail(auth_ui.failure);
 };
 
 const onSignOut = function(event){
   event.preventDefault();
   auth_api.signOut()
   .then(auth_ui.signOutSuccess)
-  .catch(auth_ui.failure);
+  .fail(auth_ui.failure);
 };
 
 const onChangePassword = function(event){
@@ -32,7 +32,7 @@ const onChangePassword = function(event){
   let data = getFormFields(event.target);
   auth_api.changePassword(data)
   .then(auth_ui.changePasswordSuccess)
-  .catch(auth_ui.failure);
+  .fail(auth_ui.failure);
 };
 
 // const dropdownMenuClick = function(event){

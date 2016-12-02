@@ -5,13 +5,15 @@ const app = require('../app');
 
 //authApi.signUp(authUi.success, authUi.failure, data);
 
-const signUp = function(data){
-  return $.ajax({
+const signUp =function(data) {
+   return $.ajax({
     url: app.host + '/sign-up/',
     method: 'POST',
     data,
   });
 };
+
+window.signUp = signUp;
 
 const signIn = function(data){
   return $.ajax({

@@ -1,0 +1,15 @@
+.case_study {
+  background-color: grey;
+
+
+}
+
+
+.data_box {
+    height: 20px;
+    width: 150px;
+    margin-right: 3%;
+    border: black solid 1px;
+    float: left;
+    /* clear: right; */
+}
