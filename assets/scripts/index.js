@@ -15,7 +15,7 @@ $(() => {
   // $( "#sign-out" ).hide();
   // $( "#sign-out" ).hide();
   // $( "#change-password" ).hide();
-  $('#SignIn_email').val('pa@pa')
-  $('#SignIn_password').val('pa')
-  $('#sign-in-button').click();
+  // $('#SignIn_email').val('pa@pa')
+  // $('#SignIn_password').val('pa')
+  // $('#sign-in-button').click();
 });
