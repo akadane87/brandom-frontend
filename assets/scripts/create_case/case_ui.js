@@ -27,13 +27,8 @@ const createCaseSuccess = (data) => {
   $('.data_box.brand').html(cas.brand);
   $('.data_box.medium').html(cas.medium);
   $('.data_box.mockup').html(cas.mockup);
-
-
-
-
-  // renderItem(data[0]);
+  $('.project_id').html(cas.id);
 };
-
 
 
 
@@ -52,4 +47,5 @@ module.exports = {
   failure,
   success,
   createCaseSuccess,
+
 };

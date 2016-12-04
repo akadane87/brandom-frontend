@@ -1,7 +1,5 @@
 .case_study {
   background-color: grey;
-
-
 }
 
 
@@ -12,4 +10,15 @@
     border: black solid 1px;
     float: left;
     /* clear: right; */
+}
+
+
+.data_id {
+  font-size: 14px;
+  font-style: oblique;
+  color: cyan;
+}
+
+.project_list {
+
 }
